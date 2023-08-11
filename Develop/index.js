@@ -67,25 +67,28 @@ inquirer.prompt([
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
     }
-]);
+]).then((data) => {
+    fs.writeFile('README.md', JSON.stringify(data, null, '\t'), (err) => 
+        err ? console.log(err) : console.log("Success!")
+    )
+});
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-fs.writeFile('README.md', `${process.argv[2]}\n`, (err) =>
-    err ? console.log(err) : console.log('Commit Logged!')
-)
-}
+// Done in the 'then' function ^
 
 // TODO: Create a function to initialize app
 // function init() {
-//     writeToFile();
-//     console.log(process.argv);
+//     console.log('node index.js')
 // }
 
 // Function call to initialize app
-// init();
+//init();
 
-//Got the questions down, need to find a way to use the commented out
-// functions above this to be able to populate the readme file with th answers.
+// Got the questions down, need to find a way to use the commented out
+// functions above this to be able to populate the readme file with the answers.
+
+// Current functionality allows me to create and populate the README file with data,
+// but it is input as an object and does not use the generateMarkdown function from
+// the other file nor the init function in this file.
