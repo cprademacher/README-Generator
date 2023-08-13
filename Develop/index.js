@@ -7,7 +7,7 @@ const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-inquirer.prompt([
+const questions = [
     {
         type: 'input',
         message: 'What is your project title? ',
@@ -67,28 +67,22 @@ inquirer.prompt([
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
     }
-]).then((data) => {
-    fs.writeFile('README.md', JSON.stringify(data, null, '\t'), (err) => 
-        err ? console.log(err) : console.log("Success!")
-    )
+];
+
+
+inquirer.prompt(questions).then((data) => {
+    const readmeContent = generateMarkdown(data);
+
+
+    fs.writeFile('README.md', readmeContent, (err) => {
+        if(err) {
+            console.log('Error writing README.md', err)
+        } else {
+            console.log('Success writing README.md!')
+        }
+    })
 });
+// Write node index.js to start the app
 
-
-
-// TODO: Create a function to write README file
-// Done in the 'then' function ^
-
-// TODO: Create a function to initialize app
-// function init() {
-//     console.log('node index.js')
-// }
-
-// Function call to initialize app
-//init();
-
-// Got the questions down, need to find a way to use the commented out
-// functions above this to be able to populate the readme file with the answers.
-
-// Current functionality allows me to create and populate the README file with data,
-// but it is input as an object and does not use the generateMarkdown function from
-// the other file nor the init function in this file.
+// Everything is working except when I 'preview' the readme file it only shows
+// me an object of the data
