@@ -1,6 +1,5 @@
-function generateMarkdown(data) {
-  return `
-  # ${data.title}
+
+  # Generate README
 
   ## Table of Contents
 
@@ -14,36 +13,32 @@ function generateMarkdown(data) {
 
   ## Description
   
-  ${data.description}
+  Allow users to easily create a professional README file
 
   ## Installation
   
-  ${data.installation}
+  Write code and push to github
 
   ## How to Use
   
-  ${data.usage}
+  Start the app with 'node index.js' and then answer the prompted questions
 
   ## Collaborators
   
-  ${data.collaborators}
+  None
 
   ## License Used
   
-  ${data.license}
+  MIT License
 
   ## Tests
 
-  ${data.tests}
+  None
 
   ## Questions
 
-  github.com/${data.username}
+  github.com/cprademacher36
 
-  ${data.email}
+  cprademacher36@gmail.com
 
   Please reach out to me via GitHub or via my email above if you have any further questions!
-`;
-}
-
-module.exports = generateMarkdown;
