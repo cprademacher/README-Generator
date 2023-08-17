@@ -23,3 +23,7 @@ Users will open the terminal and move to the index.js file.  From there they wil
 None
 
 ---
+
+## Walkthrough video of how to use the app
+
+https://drive.google.com/file/d/12RLCIzbV3r6PDAZCoghP_38u_-7wHHRg/view
