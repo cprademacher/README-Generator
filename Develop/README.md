@@ -1,5 +1,5 @@
 
-  # Generate README
+  # Generate README File
 
   ## Table of Contents
 
@@ -13,15 +13,15 @@
 
   ## Description
   
-  Allow users to easily create a professional README file
+  This is an app that allows users to quickly and easily generate readme files
 
   ## Installation
   
-  Write code and push to github
+  Write the code and push it to GitHub
 
   ## How to Use
   
-  Start the app with 'node index.js' and then answer the prompted questions
+  Start the app by entering 'node index.js' into the terminal while in my directory
 
   ## Collaborators
   
@@ -37,7 +37,7 @@
 
   ## Questions
 
-  github.com/cprademacher36
+  github.com/cprademacher
 
   cprademacher36@gmail.com
 
