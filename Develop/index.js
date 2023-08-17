@@ -20,18 +20,6 @@ const questions = [
             }
         }
     }, 
-    // {
-    //     type: 'input',
-    //     message: 'Include a table of contents',
-    //     name: 'contents',
-    //     validate: function(answer) {
-    //         if(answer.length < 1) {
-    //             return console.log("A valid table of contents is required")
-    //         } else {
-    //             return true;
-    //         }
-    //     }
-    // },
     {
         type: 'input',
         message: 'Write a description of your project.',
